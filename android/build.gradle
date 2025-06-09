@@ -27,7 +27,9 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 31
-
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.um.push.flutter_s_umeng_push'
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
